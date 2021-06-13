@@ -18,8 +18,14 @@
         },
         {
             "type": "text",
-            "source": "this was passed directly from the config file!",
+            "source": "this was passed directly from the config file! platform: %{platform}, foo: %{foo}",
             "destination": "text.txt"
+        }
+    ],
+    "variables": [
+        {
+            "name": "foo",
+            "value": "bar"
         }
     ]
 }

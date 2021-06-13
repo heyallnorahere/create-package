@@ -1,4 +1,4 @@
-# create-package
+# create-package [![test](https://github.com/yodasoda1219/create-package/actions/workflows/test.yml/badge.svg)](https://github.com/yodasoda1219/create-package/actions/workflows/test.yml)
 
 This action creates a zip file for distribution.
 
