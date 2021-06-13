@@ -12,6 +12,9 @@ function createVariableMap() {
     if (platform === "darwin") {
         platform = "macosx";
     }
+    if (platform === "win32") {
+        platform = "windows";
+    }
     variableMap.set("platform", platform);
     config.variables.forEach(variable => {
         variableMap.set(variable.name, variable.value);
