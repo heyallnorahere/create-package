@@ -24,6 +24,9 @@ config.entries.forEach(file => {
         case "directory":
             archive.directory(file.source, file.destination);
             break;
+        case "text":
+            archive.append(file.source, { name: file.destination });
+            break;
     }
 });
 archive.finalize();

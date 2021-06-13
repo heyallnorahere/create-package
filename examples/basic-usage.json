@@ -1,0 +1,25 @@
+{
+    "outputPath": "output.zip",
+    "entries": [
+        {
+            "type": "glob",
+            "source": "*.txt",
+            "destination": "bin/"
+        },
+        {
+            "type": "directory",
+            "source": "src",
+            "destination": "source"
+        },
+        {
+            "type": "file",
+            "source": "examples/basic-usage.json",
+            "destination": "config.json"
+        },
+        {
+            "type": "text",
+            "source": "this was passed directly from the config file!",
+            "destination": "text.txt"
+        }
+    ]
+}

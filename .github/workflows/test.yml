@@ -22,7 +22,7 @@ jobs:
         id: test
         uses: ./
         with:
-          config: examples/basic-usage/example.json
+          config: examples/basic-usage.json
       - name: upload artifact
         uses: actions/upload-artifact@v2
         with:
