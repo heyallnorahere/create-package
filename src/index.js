@@ -38,6 +38,7 @@ output.on("close", function() {
 archive.pipe(output);
 var variables = createVariableMap();
 config.entries.forEach(file => {
+    console.log("Adding " + file.source + " into zip file at location \"" + file.destination + "\" (" + file.type + ")");
     switch (file.type) {
         case "glob":
             archive.glob(parseString(file.source, variables), null, { prefix: parseString(file.destination, variables) });
