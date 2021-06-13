@@ -7,7 +7,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
         with:
-        submodules: recursive
+          submodules: recursive
       - name: install dependencies
         shell: bash
         run: |
