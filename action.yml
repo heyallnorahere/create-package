@@ -1,16 +1,13 @@
 name: Create Package
 description: An action that creates a compressed file for distribution
 inputs:
-  files:
-    description: A list of files to compress
-    required: true
-  output-file:
-    description: The path to output the compressed file at
+  config:
+    description: The configuration file; must be in JSON format
     required: false
-    default: ./release.zip
+    default: ./create-package-action-config.json
 outputs:
-  output:
-    description: The path to the result
+  path:
+    description: The path to the result zip file
 runs:
   using: node12
   main: src/index.js

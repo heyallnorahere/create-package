@@ -7,7 +7,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
         with:
-          submodules: recursive
+        submodules: recursive
       - name: install dependencies
         shell: bash
         run: |
@@ -19,8 +19,12 @@ jobs:
           echo b > 2.txt
           echo c > 3.txt
       - name: test action
+        id: test
         uses: ./
         with:
-          files: |
-            *.txt
-      
+          config: examples/basic-usage/example.json
+      - name: upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: result
+          path: ${{ steps.test.outputs.path }}

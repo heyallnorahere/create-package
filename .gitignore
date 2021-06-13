@@ -1,2 +1,4 @@
 node_modules/
 .vscode/
+create-package-action-config.json
+*.zip

@@ -1,0 +1,10 @@
+{
+    "outputPath": "output.zip",
+    "entries": [
+        {
+            "type": "glob",
+            "source": "*.txt",
+            "destination": "/"
+        }
+    ]
+}
