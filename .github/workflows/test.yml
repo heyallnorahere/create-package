@@ -1,0 +1,26 @@
+name: test
+on: [ push ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: install dependencies
+        shell: bash
+        run: |
+          npm install
+      - name: create files
+        shell: bash
+        run: |
+          echo a > 1.txt
+          echo b > 2.txt
+          echo c > 3.txt
+      - name: test action
+        uses: ./
+        with:
+          files: |
+            *.txt
+      

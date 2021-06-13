@@ -1,0 +1,3 @@
+[submodule "vendor/act"]
+	path = vendor/act
+	url = https://github.com/nektos/act
