@@ -16,7 +16,7 @@ archive.pipe(output);
 config.entries.forEach(file => {
     switch (file.type) {
         case "glob":
-            archive.glob(file.source, { cwd: file.destination });
+            archive.glob(file.source, null, { prefix: file.destination });
             break;
         case "file":
             archive.file(file.source, { name: file.destination });
@@ -26,4 +26,5 @@ config.entries.forEach(file => {
             break;
     }
 });
+archive.finalize();
 core.setOutput("path", config.outputPath);

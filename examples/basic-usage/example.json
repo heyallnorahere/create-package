@@ -4,7 +4,7 @@
         {
             "type": "glob",
             "source": "*.txt",
-            "destination": "/"
+            "destination": "files/"
         }
     ]
 }
